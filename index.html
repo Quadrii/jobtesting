@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/header.css">
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/flexslider.css">
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/responsiveslides.min.js"></script>
     <script src="css/bootstrap/js/bootstrap.js"></script>
@@ -20,7 +19,61 @@
 </head>
 <body onload='hideTotal()' style="background-color: #eee;">	
 	<h1>What Kind Of Website Do You Want To Build?</h1>
-		<div class="tabs">
+		<form>
+			<label class='radiolabel'>
+			<input type="radio"  id="static" name="selectedwebsite" value="static" onclick="calculateTotal('packges''static')" />Static($20)</label><br/>
+            <label class='radiolabel'>
+            <input type="radio"  id="advanced" name="selectedwebsite" value="advanced" onclick="calculateTotal('')" />Advanced Static ($25)</label><br/>
+            <label class='radiolabel'>
+            <input type="radio"  id="professional" name="selectedwebsite" value="professional" onclick="calculateTotal('')" />
+            Professional($35)</label><br/>
+            <label class='radiolabel'>
+            <input type="radio"  id="enterprise" name="selectedwebsite" value="enterprise" onclick="calculateTotal('')" />Enterprise($75)</label><br/>
+			
+			<label>How many pages?</label> <br>
+            <select id="describe" onchange="calculateTotal()"> <br>
+            	<option name="name" value="static">Select Pages</option> 
+  			</select> 
+
+  			<label>Do You Have Domain?</label> <br>
+			<div>
+			    Yes<input type="radio" name="yesno" id="yesCheck"> 
+                No<input type="radio" name="yesno" id="noCheckk" data-price="10000"> <br>
+	  		</div>
+
+	  		<label>Do You Have Hosting?</label> <br>
+			<div>
+			    Yes<input type="radio" name="yesno" id="yesCheck"> 
+                No<input type="radio"  name="yesno" id="noCheck"> <br>
+                <div id="ifYes">               
+				 
+				</div>
+				<div id="ifNo">
+			    	<select name="hosting" id="hosting">
+				    	<option>Select Hosting</option>
+				    </select>
+	  		    </div>
+	  		</div>
+
+	  		<label>Will You Provide Content?</label>
+	  		<div>
+			    Yes<input type="radio" name="yesno" id="yesCheck"> 
+                No<input type="radio"  name="yesno" id="noCheck"> <br>
+                <div id="ifYes">               
+				 
+				</div>
+				<div id="ifNo">
+			    	<select name="content" id="content">
+				    	<option>How many pages?</option>
+			            <option>20</option>
+			            <option>30</option>
+			            <option>50</option>
+				    </select>
+	  		    </div>
+	  		    <div id="totalPrice"></div>
+	  		</div>
+		</form>
+		<!-- <div class="tabs">
 		    <ul class="tab-links">
 		        <li class="active"><a href="#tab1">Static</a></li>
 		        <li><a href="#tab2">Advance Static</a></li>
@@ -32,7 +85,7 @@
 		            <form>
 			    		<select id="cost_money[1]" name="cost_money[1]">
 			    			<option>Select Pages</option>
-					        <option>20</option>
+					        <option>10</option>
 					        <optio>30</option>
 					        <option>50</option>
 				    	</select>
@@ -42,7 +95,7 @@
 	                        No<input type="radio" name="yesno" id="noCheck"><br>
 				    		
 				    		<div id="ifYes">               
-							 
+							 	
 							</div>
 
 						    <div id="ifNo">
@@ -104,7 +157,7 @@
 		            <p>Donec pulvinar neque sed semper lacinia. Curabitur lacinia ullamcorper nibh; quis imperdiet velit eleifend ac. Donec blandit mauris eget aliquet lacinia! Donec pulvinar massa interdum risus ornare mollis. In hac habitasse platea dictumst. Ut euismod tempus hendrerit. Morbi ut adipiscing nisi. Etiam rutrum sodales gravida! Aliquam tellus orci, iaculis vel.</p>
 		        </div>
 		    </div>
-		</div>
+		</div> -->
 	<script src="js/post.js"></script>
 	<script src="js/calculate.js"></script>
 </body>

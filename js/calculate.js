@@ -1,17 +1,27 @@
-var cost_money1 = document.getElementById("cost_money[1]");
-var cost_money2 = document.getElementById("cost_money[2]");
-var cost_money3 = document.getElementById("cost_money[3]");
-var totalPrice = document.getElementById("totalPrice");
-cost_money1.onchange = function() {
-  var total = parseInt(cost_money1.value) + parseInt(cost_money1.value);
-  totalPrice.value = total;
-}
-cost_money2.onchange = function() {
-  var total = parseInt(cost_money2.value) + parseInt(cost_money2.value);
-  totalPrice.value = total;
+var package_prices = new Array();
+package_prices["static"]=20;
+package_prices["advanced"]=25;
+package_prices["professional"]=35;
+package_prices["enterprise"]=75;
+
+function getWebsitePrice() {
+	var package_price = document.getElementsByName('selectedwebsite');
+
+	for (i=0; i < package_price.length; i++) {
+		if (package_price[i].checked) {
+			user_input = package_price[i].value;
+		}
+	}
+
+	return package_prices[user_input];
 }
 
-cost_money3.onchange = function() {
-  var total = parseInt(cost_money3.value) + parseInt(cost_money3.value);
-  totalPrice.value = total;
+function domainPrice() {
+	var domainPrice = document.getElementById('noCheckk');
+
+	if(domainPrice.checked) {
+		return(10000);
+	} else {
+		return(0);
+	}
 }
