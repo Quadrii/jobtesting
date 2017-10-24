@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>post a job</title>
+	<link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/responsiveslides.min.js"></script>
+    <script src="css/bootstrap/js/bootstrap.js"></script>
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0);}, false);
+	function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<style>
+		#ifYes, #ifNo { display: none;}
+		#yesCheck:checked ~ #ifYes {display: block;} 
+		#noCheck:checked ~ #ifNo {display: block;}
+	</style>
+</head>
+<body onload='hideTotal()' style="background-color: #eee;">	
+	<h1>What Kind Of Website Do You Want To Build?</h1>
+		<div class="tabs">
+		    <ul class="tab-links">
+		        <li class="active"><a href="#tab1">Static</a></li>
+		        <li><a href="#tab2">Advance Static</a></li>
+		        <li><a href="#tab3">Professional Website</a></li>
+		        <li><a href="#tab4">Enterprise Website</a></li>
+		    </ul>
+		    <div class="tab-content">
+		        <div id="tab1" class="tab active">
+		            <form>
+			    		<select id="cost_money[1]" name="cost_money[1]">
+			    			<option>Select Pages</option>
+					        <option>20</option>
+					        <optio>30</option>
+					        <option>50</option>
+				    	</select>
+				  		<h4>Do you Have Hosting?</h4>
+				  		<div>
+						    Yes<input type="radio" name="yesno" id="yesCheck"> 
+	                        No<input type="radio" name="yesno" id="noCheck"><br>
+				    		
+				    		<div id="ifYes">               
+							 
+							</div>
+
+						    <div id="ifNo">
+							    <select name="cost_money[1]" id="cost_money[2]">
+								   	<option>Select Hosting</option>
+							        <option>20</option>
+							        <option>30</option>
+							        <option>50</option>
+							    </select>
+				  		    </div>
+				  		</div>
+
+				  		<h4>Do you Have Domain?</h4>
+				  		<div>
+						    Yes<input type="radio" name="yesno" id="yesCheck"> 
+	                        No<input type="radio" name="yesno" id="noCheck"> <br>
+
+	                        <div id="ifYes">               
+							 
+							</div>
+							<div id="ifNo">
+							    <select name="cost_money[2]" id="cost_money[3]">
+							    	<option>Select Domain</option>
+						            <option>20</option>
+						            <option>30</option>
+						            <option>50</option>
+							    </select>
+				  		    </div>
+				  		</div>
+
+				  		<h4>Do you Have Content?</h4>
+				  		<div>
+						    <div>
+						      <input type="radio" name="hosting" id="hosting" required>
+						      <label for="hosting">Yes</label>
+						    </div>
+				    
+						    <div>
+						      <input type="radio" name="hosting" id="hosting">
+						      <label for="hosting">No</label>
+						    </div>
+				  		</div>
+				  		<input type="text" name="total_qty" id="totalPrice" />
+		    		</form>
+		        </div>
+		 
+		        <div id="tab2" class="tab">
+		            <p>Tab #2 content goes here!</p>
+		            <p>Donec pulvinar neque sed semper lacinia. Curabitur lacinia ullamcorper nibh; quis imperdiet velit eleifend ac. Donec blandit mauris eget aliquet lacinia! Donec pulvinar massa interdum risus ornare mollis. In hac habitasse platea dictumst. Ut euismod tempus hendrerit. Morbi ut adipiscing nisi. Etiam rutrum sodales gravida! Aliquam tellus orci, iaculis vel.</p>
+		        </div>
+		 
+		        <div id="tab3" class="tab">
+		            <p>Tab #3 content goes here!</p>
+		            <p>Donec pulvinar neque sed semper lacinia. Curabitur lacinia ullamcorper nibh; quis imperdiet velit eleifend ac. Donec blandit mauris eget aliquet lacinia! Donec pulvinar massa interdum ri.</p>
+		        </div>
+		 
+		        <div id="tab4" class="tab">
+		            <p>Tab #4 content goes here!</p>
+		            <p>Donec pulvinar neque sed semper lacinia. Curabitur lacinia ullamcorper nibh; quis imperdiet velit eleifend ac. Donec blandit mauris eget aliquet lacinia! Donec pulvinar massa interdum risus ornare mollis. In hac habitasse platea dictumst. Ut euismod tempus hendrerit. Morbi ut adipiscing nisi. Etiam rutrum sodales gravida! Aliquam tellus orci, iaculis vel.</p>
+		        </div>
+		    </div>
+		</div>
+	<script src="js/post.js"></script>
+	<script src="js/calculate.js"></script>
+</body>
+</html>
