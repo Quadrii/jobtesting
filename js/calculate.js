@@ -25,3 +25,16 @@ function domainPrice() {
 		return(0);
 	}
 }
+
+function calculateTotal() {
+	var total = getWebsitePrice() + domainPrice();
+	var totalEl = document.getElementById('totalPrice');
+
+	document.getElementById('totalPrice').innerHTML = "Your Total is: $" + total;
+	totalEl.style.display = 'block';
+}
+
+function hideTotal() {
+	var totalEl = document.getElementById('totalPrice');
+	totalEl.style.display = 'none';
+}

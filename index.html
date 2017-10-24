@@ -17,6 +17,7 @@
 		#noCheck:checked ~ #ifNo {display: block;}
 	</style>
 </head>
+
 <body onload='hideTotal()' style="background-color: #eee;">	
 	<h1>What Kind Of Website Do You Want To Build?</h1>
 		<form>
@@ -31,7 +32,7 @@
             <input type="radio"  id="enterprise" name="selectedwebsite" value="enterprise" onclick="calculateTotal('')" />Enterprise($75)</label><br/>
 			
 			<label>How many pages?</label> <br>
-            <select id="describe" onchange="calculateTotal()"> <br>
+            <select id="describe" onchange="calculateTotal()" class="page"> <br>
             	<option name="name" value="static">Select Pages</option> 
   			</select> 
 
@@ -73,6 +74,7 @@
 	  		    <div id="totalPrice"></div>
 	  		</div>
 		</form>
+
 		<!-- <div class="tabs">
 		    <ul class="tab-links">
 		        <li class="active"><a href="#tab1">Static</a></li>
