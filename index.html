@@ -22,7 +22,7 @@
 	<h1>What Kind Of Website Do You Want To Build?</h1>
 		<form>
 			<label class='radiolabel'>
-			<input type="radio"  id="static" name="selectedwebsite" value="static" onclick="calculateTotal('packges''static')" />Static($20)</label><br/>
+			<input type="radio"  id="static" name="selectedwebsite" value="static" onclick="calculateTotal('')" />Static($20)</label><br/>
             <label class='radiolabel'>
             <input type="radio"  id="advanced" name="selectedwebsite" value="advanced" onclick="calculateTotal('')" />Advanced Static ($25)</label><br/>
             <label class='radiolabel'>
@@ -32,9 +32,9 @@
             <input type="radio"  id="enterprise" name="selectedwebsite" value="enterprise" onclick="calculateTotal('')" />Enterprise($75)</label><br/>
 			
 			<label>How many pages?</label> <br>
-            <select id="describe" onchange="calculateTotal()" class="page"> <br>
-            	<option name="name" value="static">Select Pages</option> 
-  			</select> 
+            <select id="describe" onchange="calculateTotal()" class="page">
+            	<option name="name" value="static">Select Pages</option>  
+  			</select> <br>
 
   			<label>Do You Have Domain?</label> <br>
 			<div>
