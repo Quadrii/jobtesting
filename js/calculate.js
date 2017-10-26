@@ -4,6 +4,13 @@ package_prices["advanced"]=25;
 package_prices["professional"]=35;
 package_prices["enterprise"]=75;
 
+
+var hosting_prices = new Array();
+hosting_prices["None"]=0;
+hosting_prices["small slice"]=5;
+hosting_prices["medium slice"]=5;
+hosting_prices["large slice"]=7;
+
 function getWebsitePrice() {
 	var package_price = document.getElementsByName('selectedwebsite');
 
@@ -16,7 +23,13 @@ function getWebsitePrice() {
 	return package_prices[user_input];
 }
 
-function domainPrice() {
+function getHostingPrice() {
+	var hostSelect = document.getElementById('filling');
+
+	return hosting_prices[hostSelect.value];
+}
+
+function getDomainPrice() {
 	var domainPrice = document.getElementById('noCheckk');
 
 	if(domainPrice.checked) {
@@ -27,7 +40,7 @@ function domainPrice() {
 }
 
 function calculateTotal() {
-	var total = getWebsitePrice() + domainPrice();
+	var total = getWebsitePrice() + getDomainPrice();
 	var totalEl = document.getElementById('totalPrice');
 
 	document.getElementById('totalPrice').innerHTML = "Your Total is: $" + total;

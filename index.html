@@ -22,24 +22,24 @@
 	<h1>What Kind Of Website Do You Want To Build?</h1>
 		<form>
 			<label class='radiolabel'>
-			<input type="radio"  id="static" name="selectedwebsite" value="static" onclick="calculateTotal('')" />Static($20)</label><br/>
+			<input type="radio"  id="static" name="selectedwebsite"  value="static" onclick="calculateTotal('')" />Static($20)</label><br/>
             <label class='radiolabel'>
-            <input type="radio"  id="advanced" name="selectedwebsite" value="advanced" onclick="calculateTotal('')" />Advanced Static ($25)</label><br/>
+            <input type="radio"  id="advanced" name="selectedwebsite"  value="advanced" onclick="calculateTotal('')" />Advanced Static ($25)</label><br/>
             <label class='radiolabel'>
-            <input type="radio"  id="professional" name="selectedwebsite" value="professional" onclick="calculateTotal('')" />
+            <input type="radio"  id="professional" name="selectedwebsite"  value="professional" onclick="calculateTotal('')" />
             Professional($35)</label><br/>
             <label class='radiolabel'>
-            <input type="radio"  id="enterprise" name="selectedwebsite" value="enterprise" onclick="calculateTotal('')" />Enterprise($75)</label><br/>
+            <input type="radio"  id="enterprise" name="selectedwebsite"  value="enterprise" onclick="calculateTotal('')" />Enterprise($75)</label><br/>
 			
-			<label>How many pages?</label> <br>
-            <select id="describe" onchange="calculateTotal()" class="page">
-            	<option name="name" value="static">Select Pages</option>  
-  			</select> <br>
+			<label>How many Pages</label> <br>
+			<select id="describe">
+			    <option name="name" value="static">Select from Pages</option>
+			</select> <br>
 
-  			<label>Do You Have Domain?</label> <br>
+  			<label>Do You Have Domain?</label><br>
 			<div>
 			    Yes<input type="radio" name="yesno" id="yesCheck"> 
-                No<input type="radio" name="yesno" id="noCheckk" data-price="10000"> <br>
+                No<input type="radio" name="yesno" id="noCheckk"> <br>
 	  		</div>
 
 	  		<label>Do You Have Hosting?</label> <br>
@@ -50,10 +50,13 @@
 				 
 				</div>
 				<div id="ifNo">
-			    	<select name="hosting" id="hosting">
-				    	<option>Select Hosting</option>
+				    <select name="hosting" id="hosting">
+				    	<option value="none">Select Hosting</option>
+				        <option value="small slice">small</option>
+				        <option value="medium slice">medium</option>
+				        <option value="large slice">large</option>
 				    </select>
-	  		    </div>
+				</div>
 	  		</div>
 
 	  		<label>Will You Provide Content?</label>
@@ -69,12 +72,12 @@
 			            <option>20</option>
 			            <option>30</option>
 			            <option>50</option>
+			            <option>All</option>
 				    </select>
 	  		    </div>
 	  		    <div id="totalPrice"></div>
 	  		</div>
-		</form>
-
+	</form>
 		<!-- <div class="tabs">
 		    <ul class="tab-links">
 		        <li class="active"><a href="#tab1">Static</a></li>
